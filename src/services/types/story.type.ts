@@ -1,5 +1,5 @@
 export type Story = {
-  storyId: string;
+  userId: string;
   storyTitle: string;
   storyContent: string;
 }

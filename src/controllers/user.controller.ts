@@ -1,9 +1,7 @@
 import { Request, Response } from 'express';
-import { Service } from 'typedi';
 import UserService from '../services/user.service';
 import { User } from './types/user.type';
 
-@Service() 
 export default class UserController {
     constructor(private readonly userService: UserService) { }
 

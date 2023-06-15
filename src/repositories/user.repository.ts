@@ -17,7 +17,7 @@ class UserRepository {
         return await userModel().create(user);
     }
     async update(id: string, user: User): Promise<any> {
-        const data: any = dotNotation.flatten(user);
+        const data: any = dotNotation.flatten(user);//actualiza un user desde su id "aplanando" los datos en la BD
         return userModel().findOneAndUpdate({ id }, data, {
             new: true,
             useFindAndModify: false,
